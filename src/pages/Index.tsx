@@ -8,7 +8,7 @@ import { PomodoroTimer } from '@/components/PomodoroTimer';
 import { ProgressAnalysis } from '@/components/ProgressAnalysis';
 import { MotivationRecovery } from '@/components/MotivationRecovery';
 import { Gamification } from '@/components/Gamification';
-import { PremiumSubscription } from '@/components/PremiumSubscription';
+import PremiumSubscription from '@/components/PremiumSubscription';
 
 const Index = () => {
   const [tasks, setTasks] = useState([]);
