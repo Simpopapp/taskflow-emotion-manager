@@ -9,6 +9,7 @@ import { ProgressAnalysis } from '@/components/ProgressAnalysis';
 import { MotivationRecovery } from '@/components/MotivationRecovery';
 import { Gamification } from '@/components/Gamification';
 import PremiumSubscription from '@/components/PremiumSubscription';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { motion, AnimatePresence } from "framer-motion";
 
 const Index = () => {
@@ -28,11 +29,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-purple-900 p-4">
-      <Card className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-background to-background dark:from-gray-900 dark:to-purple-900 p-4">
+      <Card className="max-w-4xl mx-auto bg-card dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
         <div className="p-6">
-          <div className="flex items-center justify-center mb-6">
-            <h1 className="text-3xl font-bold text-center text-purple-700">TaskFlow</h1>
+          <div className="flex items-center justify-between mb-6">
+            <h1 className="text-3xl font-bold text-center text-foreground dark:text-white">TaskFlow</h1>
+            <ThemeToggle />
             <AnimatePresence>
               {isPremium && (
                 <motion.span
