@@ -28,7 +28,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-100 to-purple-100 p-4">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-purple-900 p-4">
       <Card className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="p-6">
           <div className="flex items-center justify-center mb-6">
@@ -74,11 +74,11 @@ const Index = () => {
           <div className="mt-6">
             <Gamification points={points} />
           </div>
+          <div className="mt-6">
+            <PremiumSubscription onSubscribe={handleSubscribe} />
+          </div>
         </div>
       </Card>
-      <div className="mt-6">
-        <PremiumSubscription onSubscribe={handleSubscribe} />
-      </div>
     </div>
   );
 };
