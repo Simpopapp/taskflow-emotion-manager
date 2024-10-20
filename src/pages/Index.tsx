@@ -8,6 +8,7 @@ import { PomodoroTimer } from '@/components/PomodoroTimer';
 import { ProgressAnalysis } from '@/components/ProgressAnalysis';
 import { MotivationRecovery } from '@/components/MotivationRecovery';
 import { Gamification } from '@/components/Gamification';
+import { PremiumSubscription } from '@/components/PremiumSubscription';
 
 const Index = () => {
   const [tasks, setTasks] = useState([]);
@@ -17,7 +18,7 @@ const Index = () => {
 
   const addTask = (task) => {
     setTasks([...tasks, task]);
-    setPoints(points + 10); // Adiciona pontos ao adicionar uma tarefa
+    setPoints(points + 10);
   };
 
   return (
@@ -25,6 +26,9 @@ const Index = () => {
       <Card className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="p-6">
           <h1 className="text-3xl font-bold text-center mb-6 text-purple-700">TaskFlow</h1>
+          <div className="mb-6">
+            <PremiumSubscription />
+          </div>
           <MoodTracker setMood={setMood} setEnergy={setEnergy} />
           <Tabs defaultValue="tasks" className="mt-6">
             <TabsList className="grid w-full grid-cols-5">
